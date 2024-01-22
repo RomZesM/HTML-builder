@@ -1,3 +1,4 @@
+const { log } = require('node:console');
 const fs = require('node:fs/promises');
 const path = require('path'); 
 
@@ -33,6 +34,18 @@ function getFileDestPath(fileSrc){
 }
 
 async function copyDir(){
+	//remove dir if it exist
+	try{
+		let check = await fs.stat('04-copy-directory/files-copy/')
+		let rem = await fs.rm('04-copy-directory/files-copy', {recursive: true })
+		
+	}
+	catch (err){	    
+		
+	}
+	
+	
+	
 	//create dir
 	await fs.mkdir('04-copy-directory/files-copy', { recursive: true }); 
 	
