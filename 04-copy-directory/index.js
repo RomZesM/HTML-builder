@@ -38,20 +38,12 @@ async function copyDir(){
 	try{
 		let check = await fs.stat('04-copy-directory/files-copy/')
 		let rem = await fs.rm('04-copy-directory/files-copy', {recursive: true })
-		
 	}
-	catch (err){	    
-		
-	}
-	
-	
-	
+	catch (err){}
 	//create dir
 	await fs.mkdir('04-copy-directory/files-copy', { recursive: true }); 
-	
 	//copy all files
 	const fileToCopy = await getFilePaths()
-
 	for (let i = 0; i < fileToCopy.length; i++) {
 		const fileSrc = fileToCopy[i];
 		const fileDest = getFileDestPath(fileSrc)
@@ -59,5 +51,4 @@ async function copyDir(){
 		await fs.copyFile(fileSrc, fileDest)
 	}	
 }
-
 copyDir()
