@@ -3,12 +3,6 @@ const fs = require('node:fs/promises');
 const path = require('path'); 
 
 
-// function callback(err) {
-// 	if (err) throw err;
-// 	console.log('source.txt was copied to destination.txt');
-//   }
-
-
 async function getFilePaths (){
 	//get all files from dir as array of Dirent
 	let filesPaths = []
@@ -29,7 +23,6 @@ async function getFilePaths (){
 
 function getFileDestPath(fileSrc){
 	let filePathParseResult = path.parse(fileSrc)
-	//console.log(filePathParseResult.base);
 	return `04-copy-directory/files-copy/${filePathParseResult.base}`
 }
 

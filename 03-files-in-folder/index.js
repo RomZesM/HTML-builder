@@ -3,7 +3,7 @@ const fsp = require('node:fs/promises');
 const path = require('path'); 
 
 
-async function dirt2 (){
+async function dir2 (){
 	//get all files from dir as array of Dirent
 	let files = await fsp.readdir("./03-files-in-folder/secret-folder", { withFileTypes: true })
 	for (let index = 0; index < files.length; index++) {
@@ -26,5 +26,4 @@ async function dirt2 (){
 		}
 	}
 }
-
-dirt2()
+dir2()

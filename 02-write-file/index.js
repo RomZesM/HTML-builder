@@ -19,8 +19,6 @@ const rl = readline.createInterface({ input, output });
 		else{
 			//write user input in file
 			fileToWrite.write(answer)
-
-			console.log(`Simon say: ${answer}`);
 			rl.setPrompt('Waiting for instructions:')
 			rl.prompt()
 			//wait for next user input will listen for it continuously

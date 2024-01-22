@@ -3,12 +3,7 @@ const fsr = require('fs');
 const path = require('path'); 
 
 
-const filePath1 = '05-merge-styles/styles/style-1.css';
-const filePath2 = '05-merge-styles/styles/style-2.css';
-const filePath3 = '05-merge-styles/styles/style-3.css';
-
 const fileToWrite = fsr.createWriteStream("05-merge-styles/project-dist/bundle.css")
-
 
 
 async function getCssFiles (){
